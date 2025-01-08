@@ -26,8 +26,22 @@ public class Addition{
         this.secondOperand = secondOperand;
     }
 
+    public Double sumOfOperands(){
+        Double sumOperands = 0.0;
+        try {
+            sumOperands = firstOperand + secondOperand;
+        } catch (NumberFormatException nfe) {
+            System.err.println("**** Error when conducting addition ****");
+            System.err.println(nfe.getLocalizedMessage());
+        } catch (Exception e){
+            System.err.println(e.getLocalizedMessage());
+        }
+        return sumOperands;
+    }
+
     @Override
     public String toString() {
-        return "Addition [getFirstOperand()=" + getFirstOperand() + ", getSecondOperand()=" + getSecondOperand() + "]";
+        return "Addition [first operand: " + firstOperand + "+ second operand: " + secondOperand + " = "+sumOfOperands()+"]";
     }
+
 }
