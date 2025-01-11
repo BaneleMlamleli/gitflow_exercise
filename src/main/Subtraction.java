@@ -1,11 +1,11 @@
 package main;
 
-public class Addition{
+public class Subtraction {
 
     public Double firstOperand;
     public Double secondOperand;
 
-    public Addition(Double firstOperand, Double secondOperand){
+    public Subtraction(Double firstOperand, Double secondOperand){
         this.firstOperand = firstOperand;
         this.secondOperand = secondOperand;
     }
@@ -26,22 +26,21 @@ public class Addition{
         this.secondOperand = secondOperand;
     }
 
-    public Double sumOfOperands(){
-        Double sumOperands = 0.0;
+    public Double subtractionOfOperands(){
+        Double subtractOperands = 0.0;
         try {
-            sumOperands = firstOperand + secondOperand;
+            subtractOperands = firstOperand - secondOperand;
         } catch (NumberFormatException nfe) {
-            System.err.println("**** Error when conducting addition ****");
+            System.err.println("**** Error when conducting Subtraction ****");
             System.err.println(nfe.getLocalizedMessage());
         } catch (Exception e){
             System.err.println(e.getLocalizedMessage());
         }
-        return sumOperands;
+        return subtractOperands;
     }
 
     @Override
     public String toString() {
-        return "Addition ["+firstOperand + " + " + secondOperand + " = " + sumOfOperands()+"]";
+        return "Subtraction ["+firstOperand + " - " + secondOperand + " = " + subtractionOfOperands()+"]";
     }
-
 }

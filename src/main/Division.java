@@ -1,11 +1,10 @@
 package main;
 
-public class Addition{
-
+public class Division {
     public Double firstOperand;
     public Double secondOperand;
 
-    public Addition(Double firstOperand, Double secondOperand){
+    public Division(Double firstOperand, Double secondOperand){
         this.firstOperand = firstOperand;
         this.secondOperand = secondOperand;
     }
@@ -26,22 +25,21 @@ public class Addition{
         this.secondOperand = secondOperand;
     }
 
-    public Double sumOfOperands(){
-        Double sumOperands = 0.0;
+    public Double divisionOfOperands(){
+        Double divideOperands = 0.0;
         try {
-            sumOperands = firstOperand + secondOperand;
+            divideOperands = firstOperand / secondOperand;
         } catch (NumberFormatException nfe) {
-            System.err.println("**** Error when conducting addition ****");
+            System.err.println("**** Error when conducting Division ****");
             System.err.println(nfe.getLocalizedMessage());
         } catch (Exception e){
             System.err.println(e.getLocalizedMessage());
         }
-        return sumOperands;
+        return divideOperands;
     }
 
     @Override
     public String toString() {
-        return "Addition ["+firstOperand + " + " + secondOperand + " = " + sumOfOperands()+"]";
+        return "Division ["+firstOperand + " / " + secondOperand + " = " + divisionOfOperands()+"]";
     }
-
 }
