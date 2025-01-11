@@ -1,6 +1,5 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Scanner;
 
 import main.Addition;
 import main.Division;
@@ -9,7 +8,6 @@ import main.Subtraction;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // Scanner scanner = new Scanner(System.in);
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
         String again = "";
@@ -65,6 +63,5 @@ public class App {
         } while (again.equals("y"));{
             System.out.println("HAVE GREAT DAY AHEARD!!");
         }
-        // scanner.close();
     }
 }
